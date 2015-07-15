@@ -1,2 +1,31 @@
 <h1>Edit Posts</h1>
-<p>hello, this is a testing</p>
+
+
+<%= form_for @post do |f| %>
+
+	<p>
+		<%= f.label :title %>:<br/>
+		<%= f.text_field :title %> <br/>
+
+	</p>
+
+	<p>
+		<%= f.label :body %> <br/>
+		<%= f.text_field :body %> <br/>
+
+	</p>
+
+	<p>
+		<%= f.select :category_id, Category.all.collect{|x| [x.name, x.id]}, {:include_blank => "Select One"} %> <br/>
+
+	</p>
+
+	<p>
+	<%= f.submit "Update post" %>
+	</p>
+
+
+<% end %>
+
+<%= link_to "Go Back", post_path %>
+

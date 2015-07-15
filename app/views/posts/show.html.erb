@@ -1,1 +1,10 @@
-<h1>Sampl Post</h1>
+<h1><%= @post.title %></h1>
+<small>created at: <%= @post.created_at.strftime("%b %d. %Y") %></small>
+<br>
+<small>updated at: <%= @post.updated_at %></small>
+
+<p><%= @post.body %> </p>
+
+
+<%= link_to "Edit Post", edit_post_path %> <br/>
+<%= link_to "Delete", @post, :data => {:confirm => 'Are you sure?'}, :method => :delete %>
