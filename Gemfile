@@ -8,6 +8,7 @@ gem 'rails', '4.2.3'
 gem 'pg', '0.18.2'
 gem 'activeadmin', :git => 'https://github.com/gregbell/active_admin.git'
 gem 'devise'
+gem 'rails_12factor'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
