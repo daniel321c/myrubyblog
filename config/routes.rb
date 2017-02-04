@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  root 'categories#index'
+  root 'home#index'
   resources :categories
   get 'categories/index'
 
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'categories/show'
 
   get 'home/index'
-    resources :posts
+  resources :posts
     resources :categories
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
